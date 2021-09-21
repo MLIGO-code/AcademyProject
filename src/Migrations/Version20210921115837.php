@@ -19,11 +19,11 @@ final class Version20210921115837 extends AbstractMigration
 
     public function up(Schema $schema): void
     {
-        $this->addSql('ALTER TABLE sylius_product CHANGE main_taxon_id main_taxon_id INT DEFAULT NULL, CHANGE updated_at updated_at DATETIME DEFAULT NULL, ADD color color VARCHAR(255) DEFAULT NULL, ADD displayColor displayColor TINYINT(1) DEFAULT NULL');
+        $this->addSql('ALTER TABLE sylius_product CHANGE main_taxon_id INT DEFAULT NULL, CHANGE updated_at  DATETIME DEFAULT NULL, ADD color  VARCHAR(255) DEFAULT NULL, ADD displayColor TINYINT(1) DEFAULT NULL');
     }
 
     public function down(Schema $schema): void
     {
-       $this->addSql('ALTER TABLE sylius_product CHANGE main_taxon_id main_taxon_id INT DEFAULT NULL, CHANGE updated_at updated_at DATETIME DEFAULT \'NULL\', CHANGE color color VARCHAR(255) CHARACTER SET utf8mb4 DEFAULT \'NULL\' COLLATE `utf8mb4_unicode_ci`, CHANGE displayColor displayColor TINYINT(1) DEFAULT \'NULL\'');
+       $this->addSql('ALTER TABLE sylius_product CHANGE main_taxon_id INT DEFAULT NULL, CHANGE updated_at DATETIME DEFAULT \'NULL\', CHANGE color  VARCHAR(255) CHARACTER SET utf8mb4 DEFAULT \'NULL\' COLLATE `utf8mb4_unicode_ci`, CHANGE displayColor TINYINT(1) DEFAULT \'NULL\'');
     }
 }
