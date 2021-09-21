@@ -1,4 +1,4 @@
-@managing_products
+@managing_products_color
 Feature: Creating simple product with color
     In order to boarden product options
     As an administrator

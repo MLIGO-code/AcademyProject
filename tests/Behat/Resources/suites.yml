@@ -1,6 +1,6 @@
 default:
     suites:
-        ui_managing_products:
+        ui_managing_products_color:
             contexts:
                 - sylius.behat.context.setup.admin_security
                 - app.tests.behat.context.product
@@ -13,4 +13,4 @@ default:
                 - sylius.behat.context.ui.admin.notification
  
             filters:
-                tags: "@managing_products && @ui"                    
+                tags: "@managing_products_color && @ui"                    
