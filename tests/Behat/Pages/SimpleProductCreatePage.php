@@ -18,7 +18,17 @@ class SimpleProductCreatePage extends SymfonyPage implements SimpleProductCreate
 
     public function setColor(string $color): void
     {
-        $this->getDocument()->selectFieldOption('Color',$color);
+        $this->getDocument()->selectFieldOption('sylius_product_color',$color);
+    }
+
+    public function pressButton(string $name):void
+    {
+        $this->getDocument()->pressButton('Create');
+    }
+
+    public function enableDisplayColor()
+    {
+        $this->getDocument()->checkField('sylius_product_displayColor');
     }
 
 }

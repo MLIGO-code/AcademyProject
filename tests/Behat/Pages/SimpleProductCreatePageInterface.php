@@ -13,5 +13,7 @@ interface SimpleProductCreatePageInterface extends SymfonyPageInterface
 
     public function setColor(string $color): void;
 
+    public function pressButton(string $name): void;
+
 
 }

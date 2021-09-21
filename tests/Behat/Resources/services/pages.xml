@@ -19,9 +19,6 @@
     <services>
         <service id="sylius.behat.symfony_page" class="FriendsOfBehat\PageObjectExtension\Page\SymfonyPage">
         </service>
-        <service id="app.tests.behat.pages.simple_product_create_interface"
-                 class="App\Tests\Behat\Pages\SimpleProductCreatePageInterface">
-        </service>
 
         <service id="app.tests.behat.pages.simple_product_create"
                  class="App\Tests\Behat\Pages\SimpleProductCreatePage"

@@ -16,15 +16,16 @@
         {% endif %}
     {% endif %}
     {{ form_row(form.cartItem.quantity, sylius_test_form_attribute('quantity')) }}
-
-        <div class="hidden divider"></div>
-        <label for="app.ui.product_color"><b>Color</b></label>
-        <div class="ui segment" id="app.ui.product_color"><span>
+     {% if  product.displayColor %}
+    <div class="hidden divider"></div>
+    <label for="app.ui.color"><b>Color</b></label>
+    <div class="ui segment" id="app.ui.color"><span>
 
         {{ product.color }}
 
              </span></div>
-        <div class="hidden divider"></div>
+    <div class="hidden divider"></div>
+     {% endif %}
     {{ sylius_template_event('sylius.shop.product.show.add_to_cart_form', {'product': product, 'order_item': order_item, 'form': form}) }}
 
     <button type="submit" class="ui huge primary icon labeled button" {{ sylius_test_html_attribute('add-to-cart-button') }}><i class="cart icon"></i> {{ 'sylius.ui.add_to_cart'|trans }}</button>

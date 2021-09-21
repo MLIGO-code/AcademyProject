@@ -4,6 +4,8 @@
            xsi:schemaLocation="http://symfony.com/schema/dic/services
            http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
-
+        <service id="app.form.extension.product_type_extension"
+                 class="App\Form\Extension\ProductTypeExtension">
+        </service>
     </services>
 </container>

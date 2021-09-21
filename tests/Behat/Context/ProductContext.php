@@ -34,6 +34,24 @@ final class ProductContext implements Context
         $this->simpleProductCreatePage->setColor($color);
     }
 
+    /**
+     * @When I click :name
+     */
+    public function iClick($name)
+    {
+        $this->simpleProductCreatePage->pressButton($name);
+    }
+
+    /**
+     * @When I enable display color
+     */
+    public function iEnableDisplayColor()
+    {
+        $this->simpleProductCreatePage->enableDisplayColor();
+    }
+
+
+
 
 
 

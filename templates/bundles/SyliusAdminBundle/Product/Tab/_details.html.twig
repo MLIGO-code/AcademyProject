@@ -10,8 +10,8 @@
             <div class="column">
                 <div class="ui segment">
                     {{ form_row(form.code) }}
-                    {{ form_row(form.color )}}
-
+                    {{ form_row(form.color) }}
+                    {{ form_row(form.displayColor )}}
                     {{ form_row(form.enabled) }}
                     {% if product.simple %}
                         {{ form_row(form.variant.shippingRequired) }}

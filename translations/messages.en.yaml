@@ -1,3 +1,4 @@
 app:
     ui:
         color: "Color"
+        color_enable: Display color on product show page

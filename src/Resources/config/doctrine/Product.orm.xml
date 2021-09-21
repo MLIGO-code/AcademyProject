@@ -7,5 +7,6 @@
 
     <mapped-superclass name="App\Entity\Product" table="sylius_product">
         <field name="color" column="color" type="string" unique="false" nullable="true"/>
+        <field name="displayColor" column="displayColor" type="boolean" nullable="true"/>
     </mapped-superclass>
 </doctrine-mapping>

@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace App\Form\Extension;
 
 use App\Entity\Product;
+use phpDocumentor\Reflection\Types\Null_;
 use Sylius\Bundle\ProductBundle\Form\Type\ProductType;
 use Symfony\Component\Form\AbstractTypeExtension;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
@@ -20,13 +21,16 @@ class ProductTypeExtension extends AbstractTypeExtension
             $event->getForm()->add(
                 'color', ChoiceType::class, [
                 'choices' => [
-                    'Set color' => "",
+                    'Set color' => null,
                     'Red' => Product::RED,
                     'Green' => Product::GREEN,
                     'Blue' => Product::BLUE
                 ],
                 'label' => 'app.ui.color'
-            ]);
+            ])
+                ->add('displayColor' ,CheckboxType::class, [
+                    'label' => 'app.ui.color_enable',
+                ]);
         });
     }
 

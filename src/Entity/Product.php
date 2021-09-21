@@ -13,6 +13,8 @@ class Product extends BaseProduct
 
     private $color;
 
+    private $displayColor;
+
 
     public function getColor()
     {
@@ -22,6 +24,18 @@ class Product extends BaseProduct
     public function setColor($color): void
     {
         $this->color = $color;
+    }
+
+
+    public function getDisplayColor()
+    {
+        return $this->displayColor;
+    }
+
+
+    public function setDisplayColor($displayColor): void
+    {
+        $this->displayColor = $displayColor;
     }
 
 

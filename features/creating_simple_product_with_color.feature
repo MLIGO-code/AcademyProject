@@ -16,6 +16,7 @@ Feature: Creating simple product with color
         And I set its slug to "simple_product_red" in "English (United States)"
         And I set its price to "$10.00" for "United States" channel
         And I set color to "Red"
+        And I enable display color
         And I add it
         Then I should be notified that it has been successfully created
         And the product "Simple Product" should appear in the store
