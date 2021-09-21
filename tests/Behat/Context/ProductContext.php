@@ -6,14 +6,14 @@ namespace App\Tests\Behat\Context;
 use App\Tests\Behat\Pages\SimpleProductCreatePageInterface;
 use Behat\Behat\Context\Context;
 
-class ProductContext implements Context
+final class ProductContext implements Context
 {
 
     /** @var SimpleProductCreatePageInterface */
     private $simpleProductCreatePage;
 
 
-    public function __construct(SimpleProductCreatePageInterface $simpleProductCreatePage)
+    function __construct(SimpleProductCreatePageInterface $simpleProductCreatePage)
     {
         $this->simpleProductCreatePage = $simpleProductCreatePage;
     }
@@ -21,17 +21,17 @@ class ProductContext implements Context
     /**
      * @Given I am on create simple product page
      */
-    public function iAmOnCreateSimpleProductPage()
+    function iAmOnCreateSimpleProductPage()
     {
-        throw new PendingException();
+        $this->simpleProductCreatePage->open();
     }
 
     /**
-     * @When I set color to :arg1
+     * @When I set color to :color
      */
-    public function iSetColorTo($arg1)
+    function iSetColorTo(string $color):void
     {
-        throw new PendingException();
+        $this->simpleProductCreatePage->setColor($color);
     }
 
 
