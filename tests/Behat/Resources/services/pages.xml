@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+
+ This file is part of the Sylius package.
+
+ (c) Paweł Jędrzejewski
+
+ For the full copyright and license information, please view the LICENSE
+ file that was distributed with this source code.
+
+-->
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+
+    <services>
+        <service id="sylius.behat.symfony_page" class="FriendsOfBehat\PageObjectExtension\Page\SymfonyPage">
+        </service>
+        <service id="app.tests.behat.pages.simple_product_create_interface"
+                 class="App\Tests\Behat\Pages\SimpleProductCreatePageInterface">
+        </service>
+
+        <service id="app.tests.behat.pages.simple_product_create"
+                 class="App\Tests\Behat\Pages\SimpleProductCreatePage"
+                 parent="sylius.behat.symfony_page"
+                 public="true">
+        </service>
+    </services>
+</container>
