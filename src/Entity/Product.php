@@ -11,29 +11,31 @@ class Product extends BaseProduct
     public const GREEN = "Green";
     public const BLUE = "Blue";
 
+    /** @var string */
     private $color;
 
+    /** @var bool */
     private $displayColor;
 
 
-    public function getColor()
+    public function getColor(): string
     {
         return $this->color;
     }
 
-    public function setColor($color): void
+    public function setColor(string $color): void
     {
         $this->color = $color;
     }
 
 
-    public function getDisplayColor()
+    public function getDisplayColor(): bool
     {
         return $this->displayColor;
     }
 
 
-    public function setDisplayColor($displayColor): void
+    public function setDisplayColor(bool $displayColor): void
     {
         $this->displayColor = $displayColor;
     }
