@@ -7,7 +7,6 @@ namespace App\Migrations;
 use Doctrine\DBAL\Schema\Schema;
 use Doctrine\Migrations\AbstractMigration;
 
-
 final class Version20210921123648 extends AbstractMigration
 {
     public function getDescription(): string
@@ -17,11 +16,11 @@ final class Version20210921123648 extends AbstractMigration
 
     public function up(Schema $schema): void
     {
-       $this->addSql('ALTER TABLE sylius_product ADD color VARCHAR(255) DEFAULT NULL, ADD displayColor TINYINT(1) DEFAULT NULL');
+        $this->addSql('ALTER TABLE sylius_product ADD color VARCHAR(255) DEFAULT NULL, ADD displayColor TINYINT(1) DEFAULT NULL');
     }
 
     public function down(Schema $schema): void
     {
-      $this->addSql('ALTER TABLE sylius_product DROP color, DROP displayColor');
+        $this->addSql('ALTER TABLE sylius_product DROP color, DROP displayColor');
     }
 }

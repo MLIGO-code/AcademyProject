@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Entity;
@@ -7,16 +8,17 @@ use Sylius\Component\Core\Model\Product as BaseProduct;
 
 class Product extends BaseProduct
 {
-    public const RED = "Red";
-    public const GREEN = "Green";
-    public const BLUE = "Blue";
+    public const RED = 'Red';
+
+    public const GREEN = 'Green';
+
+    public const BLUE = 'Blue';
 
     /** @var string */
     private $color;
 
     /** @var bool */
     private $displayColor;
-
 
     public function getColor(): string
     {
@@ -28,17 +30,13 @@ class Product extends BaseProduct
         $this->color = $color;
     }
 
-
     public function getDisplayColor(): bool
     {
         return $this->displayColor;
     }
 
-
     public function setDisplayColor(bool $displayColor): void
     {
         $this->displayColor = $displayColor;
     }
-
-
 }
