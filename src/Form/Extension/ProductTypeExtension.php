@@ -13,7 +13,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\FormEvent;
 use Symfony\Component\Form\FormEvents;
 
-class ProductTypeExtension extends AbstractTypeExtension
+class ProductTypeExtension extends AbstractTypeExtension implements ProductTypeExtensionInterface
 {
     /**
      * @param array<string, mixed> $options
