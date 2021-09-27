@@ -8,8 +8,6 @@ use FriendsOfBehat\PageObjectExtension\Page\SymfonyPage;
 class SimpleProductCreatePage extends SymfonyPage implements SimpleProductCreatePageInterface
 {
 
-
-
     public function getRouteName(): string
     {
       return  'sylius_admin_product_create_simple';

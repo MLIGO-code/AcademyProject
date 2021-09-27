@@ -15,10 +15,10 @@ class Product extends BaseProduct implements ProductInterface
     public const BLUE = 'Blue';
 
     /** @var string */
-    private $color;
+    protected $color;
 
     /** @var bool */
-    private $displayColor;
+    protected $displayColor;
 
     public function getColor(): string
     {

@@ -37,7 +37,7 @@ final class ProductContext implements Context
     /**
      * @When I click :name
      */
-    public function iClick($name)
+    function iClick($name)
     {
         $this->simpleProductCreatePage->pressButton($name);
     }
@@ -45,7 +45,7 @@ final class ProductContext implements Context
     /**
      * @When I enable display color
      */
-    public function iEnableDisplayColor()
+    function iEnableDisplayColor()
     {
         $this->simpleProductCreatePage->enableDisplayColor();
     }
