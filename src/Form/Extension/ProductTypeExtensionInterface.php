@@ -6,7 +6,7 @@ namespace App\Form\Extension;
 
 use Symfony\Component\Form\FormBuilderInterface;
 
-interface ProductTypeExtensionInterface extends FormBuilderInterface
+interface ProductTypeExtensionInterface
 {
     /**
      * @param array<string, mixed> $options
