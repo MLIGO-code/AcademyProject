@@ -6,6 +6,8 @@
     <services>
         <service id="app.form.extension.product_type_extension"
                  class="App\Form\Extension\ProductTypeExtension">
+            <tag name = "form.type_extension" extended-type = "Sylius\Bundle\ProductBundle\Form\Type\ProductType"/>
+
         </service>
     </services>
 </container>
