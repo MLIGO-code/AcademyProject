@@ -12,5 +12,4 @@ interface ProductTypeExtensionInterface
      * @param array<string, mixed> $options
      */
     public function buildForm(FormBuilderInterface $builder, array $options): void;
-    public static function getExtendedTypes(): iterable;
 }
