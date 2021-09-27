@@ -6,10 +6,11 @@ namespace App\Form\Extension;
 
 use Symfony\Component\Form\FormBuilderInterface;
 
-interface ProductTypeExtensionInterface
+interface ProductTypeExtensionInterface extends FormBuilderInterface
 {
     /**
      * @param array<string, mixed> $options
      */
     public function buildForm(FormBuilderInterface $builder, array $options): void;
+    public static function getExtendedTypes(): iterable;
 }
