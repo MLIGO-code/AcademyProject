@@ -6,7 +6,7 @@ namespace App\Entity;
 
 use Sylius\Component\Core\Model\Product as BaseProduct;
 
-class Product extends BaseProduct
+class Product extends BaseProduct implements ProductInterface
 {
     public const RED = 'Red';
 
